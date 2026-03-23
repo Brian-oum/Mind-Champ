@@ -4,7 +4,7 @@ window.addEventListener('load', function() {
     // Slight delay before reveal
     setTimeout(() => {
         preloaderOrbit.classList.add('fade-out');
-    }, 10000); 
+    }, 1000); 
 });
 
 const slides = document.querySelectorAll('.slide');
@@ -19,7 +19,23 @@ function nextSlide() {
 // 6 seconds gives the user time to read the text 
 // (1.5s for fade + 4.5s of reading time)
 setInterval(nextSlide, 6000);
+document.querySelectorAll('.filter-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
 
+            const filter = button.getAttribute('data-filter');
+            const items = document.querySelectorAll('.portfolio-item');
+
+            items.forEach(item => {
+                if (filter === 'all' || item.classList.contains(filter)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
 let lastScrollTop = 0;
 const navbar = document.getElementById('mainNav');
 
@@ -75,3 +91,4 @@ window.addEventListener('scroll', function() {
     }, options);
 
     observer.observe(statsSection);
+
