@@ -14,27 +14,50 @@
 
 <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
             <img src="./images/logo1.png" alt="Waridi Logo" onerror="this.style.display='none'">
         </a>
         
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa-solid fa-bars text-white"></i>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link nav-btn" href="#">Contact Us</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                        <li><a class="dropdown-item" href="./services/wedding.html">Wedding Planning and Coordination</a></li>
+                        <li><a class="dropdown-item" href="./services/corporate.html">Corporate Events</a></li>
+                        <li><a class="dropdown-item" href="./services/social.html">Social Events</a></li>
+                        <li><a class="dropdown-item" href="./services/venue.html">Venue Sourcing & SetUp</a></li>
+                        <li><a class="dropdown-item" href="./services/vendor.html">Vendor Coordination</a></li>
+                        <li><a class="dropdown-item" href="./services/decor.html">Event Styling & Decor</a></li>
+                        <li><a class="dropdown-item" href="./services/guest.html">Guest Management</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-btn" href="contact.html">Contact Us</a>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
 
-<section class="about-hero" style="background: linear-gradient(rgba(58, 28, 93, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1500&q=80') center/cover;">
+<section class="about-hero" style="background: linear-gradient(rgba(58, 28, 93, 0.3), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1500&q=80') center/cover;">
     <div class="container text-center">
         <h1 class="hero-title-gold">About Mindchamps</h1>
         <p class="lead text-white mx-auto" style="max-width: 700px;">Over 9 years of crafting seamless, end-to-end event solutions that showcase your brand ethos.</p>
@@ -121,7 +144,7 @@
 
                     <!-- Years of Experience -->
                     <div class="years-experience mt-4">
-                        <span class="stat-number counter" data-target="5">0</span>
+                        <span class="stat-number counter" data-target="9">0</span>
                         <div class="record-details">Years of Excellence</div>
                     </div>
 
@@ -291,8 +314,8 @@
         <div class="row">
             
             <div class="col-lg-4 mb-5 mb-lg-0">
-                <a href="#" class="footer-logo">
-                    WARIDI<br><span>EVENTS</span>
+                <a href="/" class="footer-logo">
+                    <img src="/images/logo.jpeg" alt="Waridi Events Logo" style="height:60px;">
                 </a>
                 <p class="footer-description">
                     Premium event management solutions in Kenya. We bring freshness, creativity, and reliability to every corporate experience we touch.
@@ -308,22 +331,21 @@
             <div class="col-lg-2 col-md-6 mb-5 mb-lg-0">
                 <h4 class="footer-heading">Navigate</h4>
                 <ul class="footer-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Our Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Latest Blog</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </div>
 
             <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
                 <h4 class="footer-heading">Services</h4>
                 <ul class="footer-links">
-                    <li><a href="#">Corporate Summits</a></li>
-                    <li><a href="#">Conferences</a></li>
-                    <li><a href="#">Brand Launches</a></li>
-                    <li><a href="#">Private Dinners</a></li>
-                    <li><a href="#">Logistics Management</a></li>
+                    <li><a class="dropdown-item" href="./services/wedding.html">Wedding Planning and Coordination</a></li>
+                    <li><a class="dropdown-item" href="./services/corporate.html">Corporate Events</a></li>
+                    <li><a class="dropdown-item" href="./services/venue.html">Venue Sourcing & SetUp</a></li>
+                    <li><a class="dropdown-item" href="./services/vendor.html">Vendor Coordination</a></li>
+                    <li><a class="dropdown-item" href="./services/decor.html">Event Styling & Decor</a></li>
                 </ul>
             </div>
 
@@ -331,15 +353,15 @@
                 <h4 class="footer-heading">Get In Touch</h4>
                 <div class="contact-info-item">
                     <i class="fa-solid fa-location-dot"></i>
-                    <span>Nairobi, Kenya<br>Lavington Office Block</span>
+                    <span>24/7<br>Available Services</span>
                 </div>
                 <div class="contact-info-item">
                     <i class="fa-solid fa-phone"></i>
-                    <span>+254 700 000 000</span>
+                    <span>+254 714 488 644</span>
                 </div>
                 <div class="contact-info-item">
                     <i class="fa-solid fa-envelope"></i>
-                    <span>hello@waridievents.com</span>
+                    <span>info@mindchampssolutions.co.ke</span>
                 </div>
             </div>
 
@@ -347,7 +369,7 @@
 
         <div class="row footer-bottom text-center">
             <div class="col-12">
-                <p>© 2026 Waridi Events. All Rights Reserved. Crafted for Excellence.</p>
+                <p>© 2026 MindChamps Events. All Rights Reserved. Crafted for Excellence.</p>
             </div>
         </div>
     </div>

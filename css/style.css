@@ -268,7 +268,22 @@
     border-left: 4px solid var(--primary-orange);
     padding-left: 20px;
 }
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0; 
+        animation: fadeIn 0.3s; 
+    }
 
+    .nav-item.dropdown .nav-link {
+        padding-bottom: 15px; 
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 /* Mobile Adjustments */
 @media (max-width: 991px) {
     .hero-content {
@@ -282,6 +297,11 @@
         padding-top: 15px;
         padding-left: 0;
     }
+    @media (min-width: 992px) {
+    .navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
 }
 
 /* ===== INTRO SECTION (REMAINS SAME) ===== */
@@ -611,6 +631,10 @@
     text-decoration: none;
     color: white !important;
 }
+.footer-logo img{
+    height:100px;
+    width:150px;
+}
 
 .footer-logo span {
     font-size: 10px;
@@ -619,9 +643,16 @@
 }
 
 .footer-description {
-    color: #a0a0a0;
-    line-height: 1.8;
-    margin-bottom: 25px;
+    display: block; /* Moves it to a new line */
+    font-family: 'Great Vibes', cursive; /* The Calligraphy Font */
+    color: #c5a059; /* Metallic Gold from Logo */
+    font-size: 1.4rem; /* Increased for readability */
+    font-weight: 300;
+    letter-spacing: 0; /* Script fonts should not have spacing */
+    text-transform: none; /* Keep it in sentence case like the logo */
+    margin-top: 5px;
+    /* Subtle glow to match the metallic feel */
+    text-shadow: 0 0 10px rgba(197, 160, 89, 0.3);
 }
 
 .footer-heading {
@@ -711,6 +742,7 @@
 .about-hero {
     padding: 150px 0 100px;
     text-align: center;
+    height: 60vh;
 }
 
 .hero-title-gold {
@@ -948,3 +980,257 @@
 .delay-3 { animation-delay: 0.6s; }
 .delay-4 { animation-delay: 0.8s; }
 .delay-5 { animation-delay: 1.0s; }
+
+/* Wedding Services Section Styling */
+.my-services {
+    background-color: #fcfcfc; /* Subtle off-white background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar Cards */
+.my-services .card {
+    border: 1px solid #eeeeee;
+    border-radius: 4px; /* Matches the slightly sharp corners in the image */
+    background-color: #ffffff;
+}
+
+.my-services h3, 
+.my-services h4, 
+.my-services h2 {
+    color: #333333;
+    letter-spacing: -0.5px;
+}
+
+/* Typography from Image */
+.my-services p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+    color: #555555;
+    margin-bottom: 1.2rem;
+}
+
+/* Icon colors */
+.my-services .fa-solid {
+    width: 20px;
+    color: #222;
+}
+
+/* Image Grid Styling */
+.my-services img {
+    width: 100%;
+    height: 200px; /* Fixed height for a uniform grid look */
+    object-fit: cover; /* Ensures images don't stretch */
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.my-services img:hover {
+    transform: scale(1.02); /* Subtle pop effect on hover */
+}
+
+/* Target the icons within the contact card */
+.my-services .fa-solid, 
+.my-services .fa-brands {
+    color: var(--mc-gold-dark);           /* Dark gray/black like the image */
+    font-size: 1.5rem;      /* Slightly larger than text */
+    width: 25px;            /* Fixed width so text aligns perfectly */
+    text-align: center;
+    margin-right: 15px;     /* Gap between icon and text */
+}
+/* Button Styling to match image exactly */
+.btn-success {
+    background-color: var(--mc-gold-dark) !important; /* Bright Neon Green */
+    border-color: var(--mc-gold-dark) !important;
+    color: #000 !important; /* Black text for visibility on neon green */
+    font-weight: 700;
+    text-transform: none;
+    padding: 12px;
+}
+
+.btn-danger {
+    background-color:var(--primary-orange) !important; /* Deep Maroon/Burgundy */
+    border-color: var(--primary-orange) !important;
+    color: #ffffff !important;
+    font-weight: 700;
+    text-transform: none;
+    padding: 12px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 991px) {
+    .my-services .col-lg-4 {
+        margin-bottom: 30px;
+    }
+    
+    .my-services img {
+        height: 150px; /* Shorter images on mobile */
+    }
+}
+
+/* Contact Page Specifics */
+.ls-2 { letter-spacing: 2px; }
+.text-gold { color: #D4AF37; }
+
+.contact-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.border-gold {
+    border-top: 5px solid #D4AF37 !important;
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #f8f1ff; /* Very light brand purple */
+    color: #3a1c5d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 2rem;
+}
+
+.bg-gold-icon {
+    background-color: #fff9e6;
+    color: #D4AF37;
+}
+
+.contact-link {
+    font-weight: 700;
+    color: #3a1c5d;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.contact-link:hover {
+    color: #D4AF37;
+}
+
+/* Map Section Adjustment */
+.map-placeholder {
+    transition: filter 0.3s;
+}
+.map-placeholder:hover {
+    filter: brightness(90%);
+}
+
+.greeting-animation-container {
+        position: relative;
+        overflow: hidden;
+        background-color: #1a1a1a; /* Matching bg-dark */
+    }
+
+    .hand-scene {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hand-wrapper {
+        font-size: 7rem;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* LEFT HAND: The "Fist" / Inner Grip */
+    .left-arm {
+        color: var(--gold);
+        left: -20%;
+        transform: rotate(90deg); /* Points hand to the right */
+        animation: 
+            slideInLeft var(--anim-speed) forwards cubic-bezier(0.175, 0.885, 0.32, 1.1),
+            handshake 0.6s var(--anim-speed) ease-in-out infinite;
+    }
+
+    /* RIGHT HAND: The "Open Palm" / Outer Grip */
+    .right-arm {
+        color: var(--white);
+        right: -20%;
+        /* Rotate to point left + Flip so thumb is on top */
+        transform: rotate(-90deg) scaleY(-1); 
+        animation: 
+            slideInRight var(--anim-speed) forwards cubic-bezier(0.175, 0.885, 0.32, 1.1),
+            handshakeRight 0.6s var(--anim-speed) ease-in-out infinite;
+    }
+
+    /* Sliding Animations */
+    @keyframes slideInLeft {
+        0% { left: -20%; opacity: 0; }
+        100% { left: calc(50% - 95px); opacity: 1; }
+    }
+
+    @keyframes slideInRight {
+        0% { right: -20%; opacity: 0; }
+        100% { right: calc(50% - 95px); opacity: 1; }
+    }
+
+    /* Realistic Handshake Motion (Up and Down) */
+    @keyframes handshake {
+        0%, 100% { transform: rotate(90deg) translateY(0); }
+        50% { transform: rotate(88deg) translateY(-20px); }
+    }
+
+    @keyframes handshakeRight {
+        0%, 100% { transform: rotate(-90deg) scaleY(-1) translateY(0); }
+        50% { transform: rotate(-88deg) scaleY(-1) translateY(-20px); }
+    }
+
+/* Gallery Layout */
+.gallery-img-container {
+    overflow: hidden;
+    border-radius: 8px;
+    height: 300px; /* Forces all images to the same height */
+    background-color: #f0f0f0;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crops images perfectly to fill the 300px height */
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+}
+
+/* Zoom effect since we have no captions */
+.gallery-img-container:hover .gallery-img {
+    transform: scale(1.1);
+}
+
+/* Filter Button Styling */
+.filter-btn {
+    border: 1px solid #eee;
+    background: transparent;
+    color: #666;
+    padding: 10px 25px;
+    margin: 5px;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background-color: #3a1c5d;
+    color: #fff;
+    border-color: #3a1c5d;
+}
+
+/* Mobile Tweak: 2 columns on small screens */
+@media (max-width: 576px) {
+    .gallery-img-container {
+        height: 180px;
+    }
+}
